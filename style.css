@@ -4,6 +4,7 @@ body {
 }
 
 #goal {
+    position: relative;
     width: 500px;
     height: 250px;
     border: 10px solid white;
@@ -13,7 +14,11 @@ body {
 
 #goalkeeper {
     font-size: 50px;
-    position: absolute
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: left 300ms ease;
 }
 
 button {

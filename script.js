@@ -1,23 +1,32 @@
+let goals = 0
+let shots = 0
+
 function takePenalty(direction) {
-  keeperPenalty()
-  alert(direction)
+  const keeperDirection = keeperPenalty()
+  shots += 1
+
+  if (direction === keeperDirection) {
+    document.getElementById("result").textContent =
+      `Saved! You shot ${direction}; the goalkeeper dived ${keeperDirection}.`
+  } else {
+    goals += 1
+    document.getElementById("result").textContent =
+      `Goal! You shot ${direction}; the goalkeeper dived ${keeperDirection}.`
+  }
+
+  updateScore()
 }
 
 function keeperPenalty() {
-  let dive = Math.floor(Math.random() * 3) + 1
-  let position = 200
-  if (dive == 1) {
-    dive = "left"
-    document.getElementById("goalkeeper").style.left = position + "px"
-  }
-  if (dive == 2) {
-    dive = "middle"
-    
-  }
-  if (dive == 3) {
-    dive = "right"
-    document.getElementById("goalkeeper").style.right = position + "px"
-  }
-  alert(dive)
-  
+  const directions = ["left", "centre", "right"]
+  const dive = directions[Math.floor(Math.random() * directions.length)]
+  const positions = { left: "12%", centre: "50%", right: "88%" }
+
+  document.getElementById("goalkeeper").style.left = positions[dive]
+  document.getElementById("result").textContent = `The goalkeeper dives ${dive}.`
+  return dive
+}
+
+function updateScore() {
+  document.getElementById("score").textContent = `Goals: ${goals} | Shots: ${shots}`
 }
