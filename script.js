@@ -9,8 +9,8 @@ function main(userChoice) {
 }
 
 function compChoice() {
-  choice = ["rock","paper","sci"]
-  computerChoice = choice[Math.floor(Math.random() * choice.length)]
+  const choice = ["rock","paper","sci"]
+  let computerChoice = choice[Math.floor(Math.random() * choice.length)]
   return computerChoice 
 }
 
