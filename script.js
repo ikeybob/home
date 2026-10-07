@@ -2,8 +2,8 @@ function takePenalty(direction) {
   alert(direction)
 }
 
-function keeperPenalty(dive) {
-  dive = Math.floor(Math.random(1,3))
+function keeperPenalty() {
+  let dive = Math.floor(Math.random() * 3) + 1
   if (dive == 1) {
     dive = "left"
   }
