@@ -38,4 +38,3 @@ function winDecider(compChoice,userChoice) {
   }
 }
 
-console.log(main("sci"))
