@@ -14,7 +14,7 @@ function compChoice() {
   return computerChoice 
 }
 
-function winDecider(compChoice,userChoice) {
+function winDecider(computerChoice,userChoice) {
   if (compChoice === userChoice){
     return "draw"
   }
@@ -35,6 +35,9 @@ function winDecider(compChoice,userChoice) {
   }
     if (compChoice === "rock" && userChoice === "paper"){
     return "win"
+  }
+  else {
+    console.log("fuck")
   }
 }
 
