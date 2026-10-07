@@ -1,28 +1,9 @@
-body {
-    text-align: center;
-    font-family: Arial;
+head {
+    color:burlywood;
+    font-size: 100px;
 }
 
-#goal {
-    position: relative;
-    width: 500px;
-    height: 250px;
-    border: 10px solid white;
-    background-color: green;
-    margin: 30px auto;
-}
-
-#goalkeeper {
-    font-size: 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: left 300ms ease;
-}
-
-button {
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 18px;
+h1 {
+    color:fuchsia;
+    font-size: 20px;
 }

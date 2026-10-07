@@ -1,32 +1,37 @@
-let goals = 0
-let shots = 0
+const rock = "rock"
+const paper = "paper"
+const sci = "sci"
 
-function takePenalty(direction) {
-  const keeperDirection = keeperPenalty()
-  shots += 1
+function main(userChoice) {
+ alert(winDecider(compChoice(),userChoice))
+}
 
-  if (direction === keeperDirection) {
-    document.getElementById("result").textContent =
-      `Saved! You shot ${direction}; the goalkeeper dived ${keeperDirection}.`
-  } else {
-    goals += 1
-    document.getElementById("result").textContent =
-      `Goal! You shot ${direction}; the goalkeeper dived ${keeperDirection}.`
+function compChoice() {
+  choice = ["rock","paper","sci"]
+  compChoice = choice[Math.floor(Math.random() * choice.length)]
+  return compChoice 
+}
+
+function winDecider(compChoice,userChoice) {
+  if (compChoice === userChoice){
+    return "draw"
   }
-
-  updateScore()
-}
-
-function keeperPenalty() {
-  const directions = ["left", "centre", "right"]
-  const dive = directions[Math.floor(Math.random() * directions.length)]
-  const positions = { left: "12%", centre: "50%", right: "88%" }
-
-  document.getElementById("goalkeeper").style.left = positions[dive]
-  document.getElementById("result").textContent = `The goalkeeper dives ${dive}.`
-  return dive
-}
-
-function updateScore() {
-  document.getElementById("score").textContent = `Goals: ${goals} | Shots: ${shots}`
+  if (compChoice === "rock" && userChoice === "sci"){
+    return "loss"
+  }
+  if (compChoice === "paper" && userChoice === "rock"){
+    return "loss"
+  }
+  if (compChoice === "sci" && userChoice === "paper"){
+    return "loss"
+  }
+  if (compChoice === "sci" && userChoice === "rock"){
+    return "win"
+  }
+    if (compChoice === "paper" && userChoice === "sci"){
+    return "win"
+  }
+    if (compChoice === "rock" && userChoice === "paper"){
+    return "win"
+  }
 }
