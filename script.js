@@ -3,7 +3,9 @@ const paper = "paper"
 const sci = "sci"
 
 function main(userChoice) {
- alert(winDecider(compChoice(),userChoice))
+  let result = winDecider(compChoice(),userChoice)
+  alert(result)
+  return result
 }
 
 function compChoice() {
@@ -35,3 +37,5 @@ function winDecider(compChoice,userChoice) {
     return "win"
   }
 }
+
+console.log(main("sci"))
