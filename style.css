@@ -13,6 +13,7 @@ body {
 
 #goalkeeper {
     font-size: 50px;
+    position: absolute
 }
 
 button {
