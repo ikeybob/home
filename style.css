@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    font-family: Arial;
+}
+
+#goal {
+    width: 500px;
+    height: 250px;
+    border: 10px solid white;
+    background-color: green;
+    margin: 30px auto;
+}
+
+#goalkeeper {
+    font-size: 50px;
+}
+
+button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+}
