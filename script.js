@@ -10,8 +10,8 @@ function main(userChoice) {
 
 function compChoice() {
   choice = ["rock","paper","sci"]
-  compChoice = choice[Math.floor(Math.random() * choice.length)]
-  return compChoice 
+  computerChoice = choice[Math.floor(Math.random() * choice.length)]
+  return computerChoice 
 }
 
 function winDecider(compChoice,userChoice) {
