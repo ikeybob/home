@@ -2,15 +2,15 @@ function takePenalty(direction) {
   alert(direction)
 }
 
-function keeperPenalty() {
+function keeperPenalty(dive) {
   dive = Math.floor(Math.random(1,3))
-  if (dive = 1) {
+  if (dive == 1) {
     dive = "left"
   }
-  if (dive = 2) {
+  if (dive == 2) {
     dive = "middle"
   }
-  if (dive = 3) {
+  if (dive == 3) {
     dive = "right"
   }
   alert(dive)
